@@ -11,9 +11,9 @@
 	--color-foreground-variant: var(--color-ink-2);
 	--color-muted: var(--color-paper-2);
 	--color-muted-foreground: oklch(48% 0.02 250);
-	--color-accent: #ff7518;
-	--color-accent-foreground: #ffffff;
-	--color-accent-hover: #e35c00;
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-ink);
+	--color-accent-hover: var(--accent-hover);
 	--color-border: var(--color-rule);
 	--color-border-hover: var(--color-ink-2);
 	--color-input: var(--color-paper);

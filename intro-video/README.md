@@ -3,7 +3,7 @@
 Fonte Remotion da intro do portfólio (fora do build Astro).
 
 Cenas: hero → experiências → tecnologias → projetos de laboratório → CTA.  
-Visual alinhado a `tokens.css` / `design.md` (paper/hero, accent `#FF7518`, Bricolage + Geist).
+Visual alinhado a `tokens.css` / `design.md` (paper/hero, accent `oklch(48% 0.09 180)`, Bricolage + Geist).
 
 ## Setup
 

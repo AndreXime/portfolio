@@ -21,7 +21,7 @@ same-hue gradients for depth only.
 - `--color-ink`     oklch(22% 0.03 250)
 - `--color-ink-2`   oklch(32% 0.025 250)
 - `--color-rule`    oklch(86% 0.02 80)
-- `--color-accent`  #FF7518
+- `--color-accent`  oklch(48% 0.09 180)
 - `--color-highlight` washed accent marker (marca texto)
 - `--color-focus`   oklch(58% 0.16 250)
 - `--color-hero`    oklch(22% 0.025 250)
@@ -63,7 +63,7 @@ tokens (`var(--space-md)`), never raw values.
 - Bricolage Grotesque + Geist Sans.
 - Pill CTAs and `--radius-card` surfaces.
 - Alternating cream / charcoal bands.
-- Single accent (`#FF7518`) for CTAs and emphasis.
+- Single accent (`oklch(48% 0.09 180)`) for CTAs and emphasis.
 
 ## What pages MAY differ on
 - Hero archetype within Catalogue + split.
@@ -71,4 +71,4 @@ tokens (`var(--space-md)`), never raw values.
 
 ## Provenance
 Design system locked for the user's brand on 2026-09-16. Structural DNA
-with cream / charcoal bands and a single orange accent (`#FF7518`).
+with cream / charcoal bands and a single teal accent (`oklch(48% 0.09 180)`).

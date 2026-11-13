@@ -1,6 +1,6 @@
 # Portfólio - André Ximenes
 
-Portfólio pessoal em Astro com foco em performance, legibilidade e conversão. O visual usa faixas cream/charcoal, tipografia **Bricolage Grotesque** (display) + **Geist Sans** (corpo) e accent laranja (`#FF7518`). Interações em **JavaScript nativo**, sem frameworks de UI e sem ilhas. Detalhes do sistema em [`design.md`](./design.md).
+Portfólio pessoal em Astro com foco em performance, legibilidade e conversão. O visual usa faixas cream/charcoal, tipografia **Bricolage Grotesque** (display) + **Geist Sans** (corpo) e accent teal (`oklch(48% 0.09 180)`). Interações em **JavaScript nativo**, sem frameworks de UI e sem ilhas. Detalhes do sistema em [`design.md`](./design.md).
 
 **Acesse:** [https://andreximenes.xyz](https://andreximenes.xyz)
 
