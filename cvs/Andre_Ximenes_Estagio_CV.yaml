@@ -1,0 +1,163 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: André Ricardo Ximenes
+  headline: Estagiário em Desenvolvimento | TypeScript • Node.js • Git
+  location:
+  email: andreximenesa20@gmail.com
+  photo:
+  phone: +55-88-98234-9775
+  website: https://andreximenes.xyz
+  social_networks:
+    - network: LinkedIn
+      username: andreximenesdev
+    - network: GitHub
+      username: AndreXime
+  custom_connections:
+  sections:
+    Resumo Profissional:
+      - Sou estudante de Análise e Desenvolvimento de Sistemas (4º semestre), com experiência prática em TypeScript (Node.js, NestJS/Hono e PostgreSQL). Quero um estágio em que eu escreva código de verdade em time, com espaço para errar, aprender e melhorar a cada entrega. Já atuei em um produto de seguros, usando Git/GitHub, Docker, SQL e testes. Uso LLMs no dia a dia e me responsabilizo pela qualidade do que sai. Comunico de forma clara, peço ajuda quando preciso e busco feedback para crescer.
+    Experiência Profissional:
+      - company: Stackup Software
+        position: Desenvolvedor Fullstack
+        date:
+        start_date: 2025-10
+        end_date: 2026-02
+        location: Remoto
+        summary: "[stackup-software.netlify.app](https://stackup-software.netlify.app)"
+        highlights:
+          - Entreguei frontend e backend de uma plataforma de seguros e garantias, do requisito ao deploy, em ritmo de software house com contato direto com o cliente.
+          - Modelei permissões (RBAC) e fluxos de proposta com impacto financeiro, evitando alterações indevidas em estados sensíveis.
+          - Implementei upload direto ao AWS S3 e processamento com Lambda (OCR/documentos), reduzindo carga na API e tempo de emissão.
+          - Trabalhei com PostgreSQL, Prisma, Git/GitHub e revisão de código no dia a dia do time.
+          - Participei do refinamento de regras de negócio com produto, traduzindo domínio do seguro em entregas incrementais.
+    Projetos:
+      - name: Deploy Talent - Plataforma de Recrutamento Multi-tenant | Projeto de Portfólio
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "[deploy-talent.andreximenes.xyz](https://deploy-talent.andreximenes.xyz) | [github.com/AndreXime/deploy-talent](https://github.com/AndreXime/deploy-talent)"
+        highlights:
+          - API NestJS + web Next.js em TypeScript, com JWT/RBAC, Zod e PostgreSQL/Prisma.
+          - Isolamento multi-tenant e máquina de estados de vagas/candidaturas com histórico auditável.
+          - CI separado (API/Web), health checks e deploy em produção.
+      - name: Ecommerce - API Hono, loja Astro e domínio de pedidos | Projeto de Portfólio
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "[ecommerce.andreximenes.xyz](https://ecommerce.andreximenes.xyz) | [github.com/AndreXime/ecommerce](https://github.com/AndreXime/ecommerce)"
+        highlights:
+          - Monorepo com API Hono (Bun), loja SSR Astro, OpenAPI/Zod, Prisma/PostgreSQL e Redis.
+          - Autenticação JWT (cookies HttpOnly) com refresh/revogação em Redis.
+          - Pedido como transação atômica (snapshot de preço + estoque) e RBAC vitrine/admin.
+    Formação Acadêmica:
+      - institution: UniCesumar
+        area: Análise e Desenvolvimento de Sistemas
+        degree:
+        date: "2026 - Presente"
+        start_date:
+        end_date:
+        location: 4º semestre
+        summary:
+        highlights:
+    Habilidades Técnicas:
+      - label: Linguagens
+        details: TypeScript, JavaScript, Node.js
+      - label: Backend
+        details: NestJS, Hono, Express, Prisma, Zod
+      - label: Dados
+        details: PostgreSQL, SQL, Redis
+      - label: Frontend (base)
+        details: React, Next.js, Astro, Tailwind
+      - label: Infra
+        details: Docker, Git, GitHub, Linux/terminal, CI/CD, AWS (S3, Lambda)
+      - label: Qualidade
+        details: testes (Jest/Vitest), Code Review, Clean Code / boas práticas
+      - label: IA
+        details: uso de LLMs e prompt engineering no fluxo de desenvolvimento
+    Certificações:
+      - name: JavaScript Backend Developer
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "IBM - Coursera  |  05/2026  |  [coursera.org/verify/professional-cert/PKNMO2685DQL](https://coursera.org/verify/professional-cert/PKNMO2685DQL)"
+        highlights:
+      - name: Modern Web Development with TypeScript
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "Edureka - Coursera  |  03/2026  |  [coursera.org/verify/specialization/TDOTGZTZV6HY](https://coursera.org/verify/specialization/TDOTGZTZV6HY)"
+        highlights:
+    Idiomas:
+      - label: Português
+        details: Nativo
+      - label: Inglês
+        details: Intermediário (leitura técnica avançada)
+design:
+  theme: classic
+  page:
+    size: a4
+    show_top_note: false
+    show_footer: false
+  header:
+    space_below_name: 0.4cm
+    space_below_headline: 0.4cm
+    space_below_connections: 0.4cm
+  typography:
+    font_size:
+      section_titles: 12pt
+  entries:
+    degree_width: 0cm
+    date_and_location_width: 0cm
+  templates:
+    education_entry:
+      main_column: |-
+        **AREA** • INSTITUTION
+        DATE • LOCATION
+      degree_column: ""
+      date_and_location_column: ""
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION • LOCATION
+        SUMMARY • DATE
+        HIGHLIGHTS
+      date_and_location_column: ""
+    normal_entry:
+      main_column: |-
+        **NAME**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: ""
+  colors:
+    name: rgb(13, 148, 136)
+    headline: rgb(13, 148, 136)
+    connections: rgb(15, 118, 110)
+    section_titles: rgb(13, 148, 136)
+    links: rgb(13, 148, 136)
+locale:
+  language: portuguese
+settings:
+  current_date: today
+  render_command:
+    output_folder: ../public/CVs
+    pdf_path: ../public/CVs/CV-Andre-Ximenes-estagio-desenvolvimento.pdf
+    typst_path: /tmp/rendercv/Andre_Ximenes_Estagio_CV.typ
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true
+  bold_keywords: []
+  pdf_title: André Ricardo Ximenes - CV Estágio
+
+pdf_metadata:
+  description: CV de André Ricardo Ximenes para estágio em desenvolvimento de software, com foco em TypeScript, Node.js e Git.
+  keywords:
+    - estágio
+    - desenvolvimento
+    - TypeScript
+    - Node.js
+    - NestJS
+    - PostgreSQL
+    - Git

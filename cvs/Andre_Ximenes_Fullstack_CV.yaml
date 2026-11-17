@@ -1,0 +1,175 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: André Ricardo Ximenes
+  headline: Desenvolvedor Fullstack Júnior | TypeScript • NestJS • Next.js
+  location:
+  email: andreximenesa20@gmail.com
+  photo:
+  phone: +55-88-98234-9775
+  website: https://andreximenes.xyz
+  social_networks:
+    - network: LinkedIn
+      username: andreximenesdev
+    - network: GitHub
+      username: AndreXime
+  custom_connections:
+  sections:
+    Resumo Profissional:
+      - "Desenvolvedor Fullstack com atuação no ciclo completo de produto em TypeScript: APIs com NestJS e Hono, interfaces com Next.js e React, e persistência em PostgreSQL. Experiência em autenticação JWT e RBAC, contratos tipados com Zod e pipelines assíncronos com AWS S3, AWS Lambda e BullMQ. Entrega ponta a ponta, do requisito ao deploy, com visão de como o front consome a API (auth, erros, paginação e estados de carregamento). Atuação colaborativa com Docker, Redis, CI/CD e metodologias ágeis."
+    Experiência Profissional:
+      - company: Stackup Software
+        position: Desenvolvedor Fullstack
+        date:
+        start_date: 2025-10
+        end_date: 2026-02
+        location: Remoto
+        summary: "[stackup-software.netlify.app](https://stackup-software.netlify.app)"
+        highlights:
+          - Entregou frontend e backend da plataforma de seguros e garantias, do levantamento de requisito ao deploy, cobrindo fluxos de proposta, documentos e emissão na interface e na API.
+          - Implementou upload direto ao AWS S3 via URLs pré-assinadas no cliente, eliminando o tráfego de arquivos binários pela API e reduzindo o tamanho médio dos payloads em cerca de 70%.
+          - Projetou rotinas serverless com AWS Lambda acionadas por S3 para OCR e conversão de documentos, isolando o processamento da API e reduzindo o consumo de CPU do servidor em mais de 50%.
+          - Modelou permissões RBAC para governança de estado das propostas, eliminando alterações indevidas em fluxos financeiros e de análise.
+          - Construiu motor de contratos dinâmicos a partir de templates versionados em nuvem, reduzindo o tempo de emissão de documentos de minutos para segundos.
+    Projetos:
+      - name: Deploy Talent - Plataforma de Recrutamento Multi-tenant | Projeto de Portfólio
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "[deploy-talent.andreximenes.xyz](https://deploy-talent.andreximenes.xyz) | [github.com/AndreXime/deploy-talent](https://github.com/AndreXime/deploy-talent)"
+        highlights:
+          - "Construiu o produto ponta a ponta em TypeScript: API NestJS com casos de uso, JWT + RBAC e Zod, e web Next.js/React com formulários validados e TanStack Query para estado de servidor."
+          - Implementou isolamento multi-tenant em PostgreSQL com tenant derivado do JWT e extensão do Prisma para filtrar/injetar tenantId, como segunda linha de defesa além dos use cases.
+          - Modelou vagas e candidaturas com máquinas de estado, pipeline customizável por vaga e histórico auditável, cobrindo recrutador, candidato e site público de carreiras.
+          - "Configurou health checks (liveness/readiness), CI separado para API e Web, e deploy em produção no monólito modular NestJS + Next.js."
+      - name: Ecommerce Full Stack - API Hono, loja Astro e domínio de pedidos | Projeto de Portfólio
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "[ecommerce.andreximenes.xyz](https://ecommerce.andreximenes.xyz) | [github.com/AndreXime/ecommerce](https://github.com/AndreXime/ecommerce)"
+        highlights:
+          - Desenvolveu monorepo com API REST em Hono (Bun) e loja SSR em Astro, compartilhando contrato OpenAPI/Zod, Prisma/PostgreSQL e Redis.
+          - Implementou sessão JWT em cookies HttpOnly com refresh e revogação em Redis, unificando a semântica de autenticação entre SSR e cliente.
+          - Modelou pedido como transação atômica com snapshot de preço e decremento condicional de estoque, além de RBAC entre vitrine e admin.
+    Formação Acadêmica:
+      - institution: UniCesumar
+        area: Análise e Desenvolvimento de Sistemas
+        degree:
+        date: "2026 - Presente"
+        start_date:
+        end_date:
+        location:
+        summary:
+        highlights:
+    Habilidades Técnicas:
+      - label: Linguagens & Runtimes
+        details: TypeScript, JavaScript, Node.js, Bun
+      - label: Frontend
+        details: React.js, Next.js, Astro, TailwindCSS, Shadcn, TanStack Query, Vite
+      - label: Backend
+        details: NestJS, Hono, Express, Prisma ORM, Zod
+      - label: Banco de Dados
+        details: PostgreSQL, Redis
+      - label: APIs & Integrações
+        details: REST, OpenAPI/Swagger, JWT, OAuth2, RBAC
+      - label: Cloud, Filas & Infra
+        details: AWS (S3, Lambda), Docker, BullMQ, LocalStack
+      - label: Ferramentas & Qualidade
+        details: Git, GitHub, Biome, Husky, CI/CD, Jest, Testing Library
+      - label: Metodologias
+        details: Agile, Scrum, Code Review, Boas Práticas de Código
+    Certificações:
+      - name: JavaScript Backend Developer
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "IBM - Coursera  |  05/2026  |  [coursera.org/verify/professional-cert/PKNMO2685DQL](https://coursera.org/verify/professional-cert/PKNMO2685DQL)"
+        highlights:
+      - name: Mastering NestJS
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "Packt - Coursera  |  03/2026  |  [coursera.org/verify/GK1EYYFSR7WX](https://coursera.org/verify/GK1EYYFSR7WX)"
+        highlights:
+      - name: Modern Web Development with TypeScript
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "Edureka - Coursera  |  03/2026  |  [coursera.org/verify/specialization/TDOTGZTZV6HY](https://coursera.org/verify/specialization/TDOTGZTZV6HY)"
+        highlights:
+    Idiomas:
+      - label: Português
+        details: Nativo
+      - label: Inglês
+        details: Intermediário (leitura técnica avançada)
+design:
+  theme: classic
+  page:
+    size: a4
+    show_top_note: false
+    show_footer: false
+  header:
+    space_below_name: 0.4cm
+    space_below_headline: 0.4cm
+    space_below_connections: 0.4cm
+  typography:
+    font_size:
+      section_titles: 12pt
+  entries:
+    degree_width: 0cm
+    date_and_location_width: 0cm
+  templates:
+    education_entry:
+      main_column: |-
+        **AREA** • INSTITUTION
+        DATE
+      degree_column: ""
+      date_and_location_column: ""
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION • LOCATION
+        SUMMARY • DATE
+        HIGHLIGHTS
+      date_and_location_column: ""
+    normal_entry:
+      main_column: |-
+        **NAME**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: ""
+  colors:
+    name: rgb(13, 148, 136)
+    headline: rgb(13, 148, 136)
+    connections: rgb(15, 118, 110)
+    section_titles: rgb(13, 148, 136)
+    links: rgb(13, 148, 136)
+locale:
+  language: portuguese
+settings:
+  current_date: today
+  render_command:
+    output_folder: ../public/CVs
+    pdf_path: ../public/CVs/CV-Andre-Ximenes-desenvolvedor-fullstack.pdf
+    typst_path: /tmp/rendercv/Andre_Ximenes_Fullstack_CV.typ
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true
+  bold_keywords: []
+  pdf_title: André Ricardo Ximenes - CV Fullstack
+
+pdf_metadata:
+  description: CV de André Ricardo Ximenes para vaga de Desenvolvedor Fullstack Júnior, com foco em TypeScript, NestJS e Next.js.
+  keywords:
+    - fullstack
+    - TypeScript
+    - NestJS
+    - Next.js
+    - React
+    - PostgreSQL
+    - AWS
+    - JWT
+    - RBAC

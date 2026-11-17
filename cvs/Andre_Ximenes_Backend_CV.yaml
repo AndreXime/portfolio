@@ -1,0 +1,171 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: André Ricardo Ximenes
+  headline: Desenvolvedor Backend Júnior | TypeScript • Node.js • NestJS
+  location:
+  email: andreximenesa20@gmail.com
+  photo:
+  phone: +55-88-98234-9775
+  website: https://andreximenes.xyz
+  social_networks:
+    - network: LinkedIn
+      username: andreximenesdev
+    - network: GitHub
+      username: AndreXime
+  custom_connections:
+  sections:
+    Resumo Profissional:
+      - Desenvolvedor Backend com atuação no ciclo completo de APIs RESTful utilizando TypeScript, Node.js, NestJS e Hono, com foco em performance, segurança e escalabilidade. Experiência na modelagem de dados relacionais com PostgreSQL, implementação de autenticação baseada em JWT e RBAC, e arquitetura de pipelines assíncronos com AWS S3, AWS Lambda e filas via BullMQ. Perfil direcionado ao desenvolvimento backend robusto, traduzindo regras de negócio em soluções resilientes. Base prática em projetos com Docker, Redis e integração de serviços externos. Atuação em ambiente colaborativo com metodologias ágeis e boas práticas de qualidade de código.
+    Experiência Profissional:
+      - company: Stackup Software
+        position: Desenvolvedor Backend
+        date:
+        start_date: 2025-10
+        end_date: 2026-02
+        location: Remoto
+        summary: "[stackup-software.netlify.app](https://stackup-software.netlify.app)"
+        highlights:
+          - Projetou e manteve API RESTful utilizando TypeScript e Hono com validação estrita de payloads via Zod e persistência em PostgreSQL, garantindo alta disponibilidade com estratégia de reconexão via backoff exponencial.
+          - Modelou sistema de permissões baseado em tokens (RBAC) para governança de estado das propostas de seguros, eliminando o risco de alterações indevidas em fluxos financeiros e de análise.
+          - Implementou pipeline assíncrono para processamento de documentos sensíveis integrando AWS S3 e AWS Lambda com execução de OCR e reconciliação dos dados extraídos diretamente com o banco de dados PostgreSQL.
+          - Automatizou a geração de contratos jurídicos dinâmicos lendo templates versionados em nuvem, reduzindo gargalos operacionais e tempo de emissão de documentos na plataforma de seguros.
+          - Desenvolveu módulos de integração com APIs externas para consumo de dados de parceiros, organizando adaptadores internos para manter o código desacoplado e de fácil manutenção.
+          - Estruturou camadas de serviço e repositório seguindo separação de responsabilidades, garantindo modularidade e facilitando a evolução da plataforma sem impacto em fluxos existentes.
+          - Colaborou com o time de produto na modelagem de requisitos e refinamento de regras de negócio, contribuindo para a cobertura completa dos fluxos da plataforma de seguros e garantias.
+          - Adotou boas práticas de qualidade com Biome e Husky para padronização de código e prevenção de erros antes do commit, aumentando a estabilidade das entregas em produção.
+    Projetos:
+      - name: Deploy Talent - Plataforma de Recrutamento Multi-tenant | Projeto de Portfólio
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "[deploy-talent.andreximenes.xyz](https://deploy-talent.andreximenes.xyz) | [github.com/AndreXime/deploy-talent](https://github.com/AndreXime/deploy-talent)"
+        highlights:
+          - Desenvolveu API REST em NestJS e TypeScript com arquitetura modular baseada em casos de uso, JWT + RBAC e validação de entrada com Zod, cobrindo fluxos B2B de recrutamento de ponta a ponta.
+          - Implementou isolamento multi-tenant em PostgreSQL com tenant derivado do token JWT e extensão do client Prisma para filtrar/injetar tenantId, como segunda linha de defesa além dos use cases.
+          - Modelou domínio de vagas e candidaturas com máquinas de estado explícitas, pipeline customizável por vaga e histórico auditável de transições entre etapas do processo seletivo.
+          - Congelou o pipeline de cada vaga após publicação, para etapas não mudarem no meio de um processo seletivo ativo.
+          - Configurou health checks (liveness/readiness), CI separado para API e Web, e deploy em produção com monólito modular (NestJS + Next.js).
+    Formação Acadêmica:
+      - institution: UniCesumar
+        area: Análise e Desenvolvimento de Sistemas
+        degree:
+        date: "2026 - Presente"
+        start_date:
+        end_date:
+        location:
+        summary:
+        highlights:
+    Habilidades Técnicas:
+      - label: Linguagens & Runtimes
+        details: TypeScript, JavaScript, Node.js, Bun
+      - label: Frameworks & Bibliotecas
+        details: NestJS, Hono, Express, Prisma ORM, Zod
+      - label: Banco de Dados
+        details: PostgreSQL, Redis
+      - label: Filas & Mensageria
+        details: BullMQ
+      - label: APIs & Integrações
+        details: REST, OpenAPI/Swagger, JWT, OAuth2, RBAC
+      - label: Cloud & Infraestrutura
+        details: AWS (S3, Lambda), Docker, LocalStack
+      - label: Frontend (base prática)
+        details: React.js, Next.js, TailwindCSS, Shadcn, Vite, Astro
+      - label: Ferramentas & Qualidade
+        details: Git, GitHub, Biome, Husky, CI/CD
+      - label: Metodologias
+        details: Agile, Scrum, Code Review, Boas Práticas de Código
+    Certificações:
+      - name: JavaScript Backend Developer
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "IBM - Coursera  |  05/2026  |  [coursera.org/verify/professional-cert/PKNMO2685DQL](https://coursera.org/verify/professional-cert/PKNMO2685DQL)"
+        highlights:
+      - name: Mastering NestJS
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "Packt - Coursera  |  03/2026  |  [coursera.org/verify/GK1EYYFSR7WX](https://coursera.org/verify/GK1EYYFSR7WX)"
+        highlights:
+      - name: Modern Web Development with TypeScript
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: "Edureka - Coursera  |  03/2026  |  [coursera.org/verify/specialization/TDOTGZTZV6HY](https://coursera.org/verify/specialization/TDOTGZTZV6HY)"
+        highlights:
+    Idiomas:
+      - label: Português
+        details: Nativo
+      - label: Inglês
+        details: Intermediário (leitura técnica avançada)
+design:
+  theme: classic
+  page:
+    size: a4
+    show_top_note: false
+    show_footer: false
+  header:
+    space_below_name: 0.4cm
+    space_below_headline: 0.4cm
+    space_below_connections: 0.4cm
+  typography:
+    font_size:
+      section_titles: 12pt
+  entries:
+    degree_width: 0cm
+    date_and_location_width: 0cm
+  templates:
+    education_entry:
+      main_column: |-
+        **AREA** • INSTITUTION
+        DATE
+      degree_column: ""
+      date_and_location_column: ""
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION • LOCATION
+        SUMMARY • DATE
+        HIGHLIGHTS
+      date_and_location_column: ""
+    normal_entry:
+      main_column: |-
+        **NAME**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: ""
+  colors:
+    name: rgb(13, 148, 136)
+    headline: rgb(13, 148, 136)
+    connections: rgb(15, 118, 110)
+    section_titles: rgb(13, 148, 136)
+    links: rgb(13, 148, 136)
+locale:
+  language: portuguese
+settings:
+  current_date: today
+  render_command:
+    output_folder: ../public/CVs
+    pdf_path: ../public/CVs/CV-Andre-Ximenes-desenvolvedor-backend.pdf
+    typst_path: /tmp/rendercv/Andre_Ximenes_Backend_CV.typ
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true
+  bold_keywords: []
+  pdf_title: André Ricardo Ximenes - CV Backend
+
+pdf_metadata:
+  description: CV de André Ricardo Ximenes para vaga de Desenvolvedor Backend Júnior, com foco em TypeScript, Node.js, NestJS e APIs.
+  keywords:
+    - backend
+    - TypeScript
+    - Node.js
+    - NestJS
+    - Hono
+    - PostgreSQL
+    - AWS
+    - JWT
+    - RBAC
