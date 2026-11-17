@@ -1,0 +1,200 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      font-style: normal;
+      font-weight: 800;
+      font-display: block;
+      src: url("assets/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Geist Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-display: block;
+      src: url("assets/fonts/geist-sans-latin-600-normal.woff2") format("woff2");
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      --accent: oklch(48% 0.09 180);
+      --hero: oklch(22% 0.025 250);
+      --hero2: oklch(28% 0.03 250);
+      --hero-fg: oklch(97% 0.018 80);
+      --ink: oklch(22% 0.03 250);
+      --font-display: "Bricolage Grotesque", sans-serif;
+      --font-body: "Geist Sans", sans-serif;
+      background: var(--hero);
+    }
+    #hero-frame {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background: radial-gradient(ellipse 70% 55% at 50% 42%, var(--hero2) 0%, var(--hero) 70%);
+    }
+    #hero-copy {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 120px;
+    }
+    #hero-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 168px;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+      color: var(--hero-fg);
+    }
+    #hero-bar {
+      margin-top: 36px;
+      width: 280px;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--accent);
+    }
+    #hero-role {
+      margin-top: 32px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: 0.02em;
+      color: color-mix(in srgb, oklch(97% 0.018 80) 82%, transparent);
+    }
+    #hero-cursor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 44px;
+      height: 44px;
+      opacity: 0;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+    }
+    #hero-ripple {
+      position: absolute;
+      left: 903px;
+      top: 373px;
+      width: 114px;
+      height: 114px;
+      border-radius: 999px;
+      border: 3px solid var(--accent);
+      opacity: 0;
+    }
+  </style>
+  <div
+    id="root"
+    data-composition-id="hero"
+    data-width="1920"
+    data-height="1080"
+    data-duration="5"
+  >
+    <div id="hero-frame" data-layout-allow-overflow="true">
+      <div id="hero-copy">
+        <div id="hero-name-wrap">
+          <div id="hero-name" data-layout-bleed="true" data-layout-allow-overlap="true" data-var-text="name">André Ximenes</div>
+        </div>
+        <div id="hero-bar"></div>
+        <div id="hero-role" data-var-text="role">Desenvolvedor Backend TypeScript</div>
+      </div>
+      <div id="hero-ripple"></div>
+      <div id="hero-cursor">
+        <svg id="hero-cursor-glyph" width="44" height="44" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M4 3.5L4 19.5L9.2 14.8L12.8 22L15.2 20.9L11.5 13.8L18 13.8L4 3.5Z"
+            fill="oklch(97% 0.018 80)"
+            stroke="oklch(22% 0.03 250)"
+            stroke-width="1.2"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      "#hero-frame",
+      { opacity: 0, scale: 1.06 },
+      { opacity: 1, scale: 1, duration: 0.4, ease: "none" },
+      0,
+    );
+    tl.to("#hero-frame", { scale: 1.02, duration: 4.6, ease: "none" }, 0.4);
+    tl.to("#hero-frame", { opacity: 0, duration: 0.933, ease: "none" }, 4.067);
+
+    tl.fromTo(
+      "#hero-name-wrap",
+      { opacity: 0, y: 72 },
+      { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" },
+      0,
+    );
+    tl.fromTo(
+      "#hero-role",
+      { opacity: 0, y: 36 },
+      { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" },
+      0.733,
+    );
+    tl.set("#hero-bar", { scaleX: 0, transformOrigin: "left center" }, 0);
+    tl.fromTo("#hero-bar", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "none" }, 0.933);
+
+    tl.fromTo("#hero-name", { scale: 1 }, { scale: 0.97, duration: 0.167, ease: "none" }, 4.067);
+    tl.to("#hero-name", { scale: 1, duration: 0.3, ease: "none" }, 4.234);
+
+    tl.set("#hero-cursor", { x: 1580, y: 180, opacity: 0 }, 0);
+    tl.fromTo("#hero-cursor", { opacity: 0 }, { opacity: 1, duration: 0.333, ease: "none" }, 0.667);
+    tl.fromTo(
+      "#hero-cursor",
+      { x: 1580, y: 180 },
+      { x: 1220, y: 310, duration: 0.4, ease: "none" },
+      0.667,
+    );
+
+    const orbitKeyframes = [];
+    const orbitSteps = 19;
+    for (let step = 1; step <= orbitSteps; step += 1) {
+      const progress = step / orbitSteps;
+      const angle = -0.4 + progress * Math.PI * 2.15;
+      orbitKeyframes.push({
+        x: 960 + Math.cos(angle) * 300,
+        y: 430 + Math.sin(angle) * 170,
+        duration: 76 / orbitSteps / 30,
+        ease: "none",
+      });
+    }
+    tl.to("#hero-cursor", { keyframes: orbitKeyframes, ease: "none" }, 32 / 30);
+
+    const orbitEnd = orbitKeyframes[orbitKeyframes.length - 1];
+    tl.fromTo(
+      "#hero-cursor",
+      { x: orbitEnd.x, y: orbitEnd.y },
+      { x: 968, y: 442, duration: 14 / 30, ease: "power2.out" },
+      108 / 30,
+    );
+
+    tl.set("#hero-cursor-glyph", { transformOrigin: "2px 2px", scale: 1 }, 0);
+    tl.fromTo(
+      "#hero-cursor-glyph",
+      { scale: 1 },
+      { scale: 0.82, duration: 4 / 30, ease: "none" },
+      122 / 30,
+    );
+    tl.to("#hero-cursor-glyph", { scale: 1, duration: 4 / 30, ease: "none" }, 126 / 30);
+
+    tl.set("#hero-ripple", { opacity: 0, scale: 24 / 114, transformOrigin: "center center" }, 0);
+    tl.fromTo(
+      "#hero-ripple",
+      { opacity: 0, scale: 24 / 114 },
+      { opacity: 0.55, scale: 54 / 114, duration: 6 / 30, ease: "none" },
+      122 / 30,
+    );
+    tl.to("#hero-ripple", { opacity: 0, scale: 1, duration: 12 / 30, ease: "none" }, 128 / 30);
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["hero"] = tl;
+  </script>
+</template>

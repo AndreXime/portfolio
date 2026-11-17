@@ -38,9 +38,11 @@ dist
 *.html
 docs
 
-# intro-video (Remotion)
-intro-video/node_modules
+# intro (Hyperframes; o HTML é a composição)
+!intro-video/
+!intro-video/**/*.html
 intro-video/out
+intro-video/.hyperframes
 
 # hallmark (design skill artifacts)
 .hallmark

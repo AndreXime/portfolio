@@ -1,0 +1,192 @@
+<!doctype html>
+<html
+  lang="pt-BR"
+  data-resolution="landscape"
+  data-composition-variables='[
+    {"id":"name","type":"string","label":"Nome","default":"André Ximenes"},
+    {"id":"role","type":"string","label":"Cargo","default":"Desenvolvedor Backend TypeScript"},
+    {"id":"experiencesLabel","type":"string","label":"Rótulo de experiência","default":"Experiência"},
+    {"id":"company","type":"string","label":"Empresa","default":"Stackup Software"},
+    {"id":"expRole","type":"string","label":"Cargo na empresa","default":"Desenvolvedor Fullstack"},
+    {"id":"period","type":"string","label":"Período","default":"10/2025 - 02/2026"},
+    {"id":"expH1","type":"string","label":"Destaque 1","default":"Lambda + S3 · OCR e DOCX→PDF"},
+    {"id":"expH2","type":"string","label":"Destaque 2","default":"PostgreSQL + Prisma em produção"},
+    {"id":"expH3","type":"string","label":"Destaque 3","default":"Pre-signed URLs · payloads −70%"},
+    {"id":"technologiesHeadline","type":"string","label":"Título de tecnologias","default":"Algumas das tecnologias que domino"},
+    {"id":"projectsLabel","type":"string","label":"Rótulo de projetos","default":"Projetos de laboratório pessoais"},
+    {"id":"p1Name","type":"string","label":"Projeto 1","default":"Deploy Talent"},
+    {"id":"p1Tagline","type":"string","label":"Projeto 1, linha","default":"ATS multi-tenant: carreiras, pipeline e auditoria"},
+    {"id":"p1h1","type":"string","label":"Projeto 1, destaque 1","default":"NestJS + Next.js + Prisma"},
+    {"id":"p1h2","type":"string","label":"Projeto 1, destaque 2","default":"Isolamento por tenant"},
+    {"id":"p1h3","type":"string","label":"Projeto 1, destaque 3","default":"Pipeline por vaga com auditoria"},
+    {"id":"p1Url","type":"string","label":"Projeto 1, URL","default":"deploy-talent.andreximenes.xyz"},
+    {"id":"p2Name","type":"string","label":"Projeto 2","default":"Ecommerce"},
+    {"id":"p2Tagline","type":"string","label":"Projeto 2, linha","default":"API Hono, loja Astro e domínio de pedidos"},
+    {"id":"p2h1","type":"string","label":"Projeto 2, destaque 1","default":"Hono + Bun + Prisma"},
+    {"id":"p2h2","type":"string","label":"Projeto 2, destaque 2","default":"Pedido atômico com estoque"},
+    {"id":"p2h3","type":"string","label":"Projeto 2, destaque 3","default":"JWT, Redis e OpenAPI"},
+    {"id":"p2Url","type":"string","label":"Projeto 2, URL","default":"ecommerce.andreximenes.xyz"},
+    {"id":"ctaHeadline","type":"string","label":"Chamada","default":"Vamos construir algo juntos?"},
+    {"id":"link1Label","type":"string","label":"Link 1","default":"Portfólio"},
+    {"id":"link1Url","type":"string","label":"Link 1, URL","default":"andreximenes.xyz"},
+    {"id":"link2Label","type":"string","label":"Link 2","default":"LinkedIn"},
+    {"id":"link2Url","type":"string","label":"Link 2, URL","default":"linkedin.com/in/andreximenesdev"},
+    {"id":"link3Label","type":"string","label":"Link 3","default":"GitHub"},
+    {"id":"link3Url","type":"string","label":"Link 3, URL","default":"github.com/AndreXime"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: oklch(22% 0.025 250);
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: oklch(22% 0.025 250);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="24"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        id="hero"
+        class="clip"
+        data-composition-id="hero"
+        data-composition-src="compositions/hero.html"
+        data-start="0"
+        data-duration="5"
+        data-track-index="0"
+        data-track-kind="graphics"
+        data-width="1920"
+        data-height="1080"
+        style="z-index: 1"
+      ></div>
+      <div
+        id="experiences"
+        class="clip"
+        data-composition-id="experiences"
+        data-composition-src="compositions/experiences.html"
+        data-start="4.5"
+        data-duration="5.5"
+        data-track-index="1"
+        data-track-kind="graphics"
+        data-width="1920"
+        data-height="1080"
+        style="z-index: 2"
+      ></div>
+      <div
+        id="technologies"
+        class="clip"
+        data-composition-id="technologies"
+        data-composition-src="compositions/technologies.html"
+        data-start="9.5"
+        data-duration="5"
+        data-track-index="0"
+        data-track-kind="graphics"
+        data-width="1920"
+        data-height="1080"
+        style="z-index: 3"
+      ></div>
+      <div
+        id="projects"
+        class="clip"
+        data-composition-id="projects"
+        data-composition-src="compositions/projects.html"
+        data-start="14"
+        data-duration="5.5"
+        data-track-index="1"
+        data-track-kind="graphics"
+        data-width="1920"
+        data-height="1080"
+        style="z-index: 4"
+      ></div>
+      <div
+        id="cta"
+        class="clip"
+        data-composition-id="cta"
+        data-composition-src="compositions/cta.html"
+        data-start="19"
+        data-duration="5"
+        data-track-index="0"
+        data-track-kind="graphics"
+        data-width="1920"
+        data-height="1080"
+        style="z-index: 5"
+      ></div>
+
+      <audio
+        id="sfx-click"
+        class="clip"
+        src="assets/sfx/click.mp3"
+        data-start="4.067"
+        data-duration="1.8"
+        data-track-index="2"
+        data-volume="1"
+      ></audio>
+      <audio
+        id="sfx-whoosh-experiences"
+        class="clip"
+        src="assets/sfx/whoosh.mp3"
+        data-start="4.833"
+        data-duration="1.667"
+        data-track-index="3"
+        data-volume="0.7"
+      ></audio>
+      <audio
+        id="sfx-whoosh-technologies"
+        class="clip"
+        src="assets/sfx/whoosh.mp3"
+        data-start="9.833"
+        data-duration="1.667"
+        data-track-index="2"
+        data-volume="0.65"
+      ></audio>
+      <audio
+        id="sfx-whoosh-projects"
+        class="clip"
+        src="assets/sfx/whoosh.mp3"
+        data-start="14.333"
+        data-duration="1.667"
+        data-track-index="2"
+        data-volume="0.65"
+      ></audio>
+      <audio
+        id="sfx-whoosh-cta"
+        class="clip"
+        src="assets/sfx/whoosh.mp3"
+        data-start="19.333"
+        data-duration="1.667"
+        data-track-index="2"
+        data-volume="0.7"
+      ></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

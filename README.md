@@ -79,7 +79,7 @@ src/
     └── api/contact.ts # prerender: false (Worker na Cloudflare)
 ```
 
-Na raiz: `wrangler.jsonc`, `devtools/generate-og.ts` (OG) e `intro-video/` (fonte Remotion da intro). O MP4 versionado fica em `public/videos/intro.mp4`.
+Na raiz: `wrangler.jsonc`, `devtools/generate-og.ts` (OG) e `intro-video/` (fonte Hyperframes da intro). O MP4 versionado fica em `public/videos/intro.mp4`.
 
 ## Desenvolvimento
 

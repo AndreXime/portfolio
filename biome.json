@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**/*", "!**/*.astro", "!intro-video/out", "!intro-video/node_modules"]
+		"includes": ["**/*", "!**/*.astro", "!intro-video"]
 	},
 	"formatter": {
 		"enabled": true,
