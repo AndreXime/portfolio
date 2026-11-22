@@ -1,42 +1,27 @@
 ---
-# Main stack.
+# Main stack (home): day-to-day only.
 # - Most: Simple Icons slug → render as `simple-icons:slug`
-# - `bullmq`, `shadcn`: local SVG in `src/icons/`
+# - `bullmq`, `shadcn`, `rest`: local SVG in `src/icons/`
 technologies:
-  - name: "TypeScript"
-    role: "Primary language"
-    icons: ["typescript"]
-  - name: "Node.js & Bun"
-    role: "JavaScript runtimes"
-    icons: ["nodedotjs", "bun"]
+  - name: "TypeScript, Node.js & Bun"
+    role: "Language and runtimes"
+    icons: ["typescript", "nodedotjs", "bun"]
   - name: "NestJS, Express & Hono"
-    role: "Backend frameworks"
+    role: "Backend"
     icons: ["nestjs", "express", "hono"]
   - name: "REST & OpenAPI"
-    role: "APIs and documentation"
+    role: "API contracts"
     icons: ["rest", "openapiinitiative"]
-  - name: "PostgreSQL & Redis"
-    role: "Databases"
-    icons: ["postgresql", "redis"]
-  - name: "Prisma & BullMQ"
-    role: "ORM and messaging"
-    icons: ["prisma", "bullmq"]
+  - name: "PostgreSQL, Redis & Prisma"
+    role: "Data"
+    icons: ["postgresql", "redis", "prisma"]
   - name: "S3 & SMTP"
-    role: "Object Storage and Mail Transfer"
+    role: "Integrations"
     icons: ["amazons3", "amazonsimpleemailservice"]
-  - name: "Git & GitHub"
-    role: "Version control"
-    icons: ["git", "github"]
-  - name: "Docker & Linux"
-    role: "Infrastructure"
-    icons: ["docker", "linux"]
-  - name: "Jest, Vitest & React Testing Library"
-    role: "Testing"
-    icons: ["jest", "vitest", "testinglibrary"]
-  - name: "GitHub Actions & AWS"
-    role: "Automation and deploy"
-    icons: ["githubactions", "amazonaws"]
-  - name: "Next.js, Astro, Vite & Tailwind"
-    role: "Frontend frameworks"
-    icons: ["nextdotjs", "astro", "vite", "tailwindcss"]
+  - name: "Docker, Linux, Git & GitHub Actions"
+    role: "Delivery"
+    icons: ["docker", "linux", "git", "githubactions"]
+  - name: "Next.js, Astro & Tailwind"
+    role: "Frontend when needed"
+    icons: ["nextdotjs", "astro", "tailwindcss"]
 ---

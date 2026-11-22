@@ -1,42 +1,27 @@
 ---
-# Stack principal.
+# Stack principal (home): só o dia a dia.
 # - Maioria: slug Simple Icons → render como `simple-icons:slug`
-# - `bullmq`, `shadcn`: SVG local em `src/icons/`
+# - `bullmq`, `shadcn`, `rest`: SVG local em `src/icons/`
 technologies:
-  - name: "TypeScript"
-    role: "Linguagem principal"
-    icons: ["typescript"]
-  - name: "Node.js e Bun"
-    role: "Runtimes JavaScript"
-    icons: ["nodedotjs", "bun"]
+  - name: "TypeScript, Node.js e Bun"
+    role: "Linguagem e runtimes"
+    icons: ["typescript", "nodedotjs", "bun"]
   - name: "NestJS, Express e Hono"
-    role: "Frameworks de backend"
+    role: "Backend"
     icons: ["nestjs", "express", "hono"]
   - name: "REST e OpenAPI"
-    role: "APIs e documentação"
+    role: "Contratos de API"
     icons: ["rest", "openapiinitiative"]
-  - name: "PostgreSQL e Redis"
-    role: "Banco de dados"
-    icons: ["postgresql", "redis"]
-  - name: "Prisma e BullMQ"
-    role: "ORM e Mensageria"
-    icons: ["prisma", "bullmq"]
+  - name: "PostgreSQL, Redis e Prisma"
+    role: "Dados"
+    icons: ["postgresql", "redis", "prisma"]
   - name: "S3 e SMTP"
-    role: "Object Storage e Mail Transfer"
+    role: "Integrações"
     icons: ["amazons3", "amazonsimpleemailservice"]
-  - name: "Git e GitHub"
-    role: "Versionamento"
-    icons: ["git", "github"]
-  - name: "Docker e Linux"
-    role: "Infraestrutura"
-    icons: ["docker", "linux"]
-  - name: "Jest, Vitest e React Testing Library"
-    role: "Testes"
-    icons: ["jest", "vitest", "testinglibrary"]
-  - name: "GitHub Actions e AWS"
-    role: "Automação e deploy"
-    icons: ["githubactions", "amazonaws"]
-  - name: "Next.js, Astro, Vite e Tailwind"
-    role: "Frameworks de frontend"
-    icons: ["nextdotjs", "astro", "vite", "tailwindcss"]
+  - name: "Docker, Linux, Git e GitHub Actions"
+    role: "Entrega"
+    icons: ["docker", "linux", "git", "githubactions"]
+  - name: "Next.js, Astro e Tailwind"
+    role: "Frontend quando preciso"
+    icons: ["nextdotjs", "astro", "tailwindcss"]
 ---

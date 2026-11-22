@@ -51,30 +51,29 @@ function resolveIconName(slug: string) {
     </div>
 
     <ul
-      class="mt-14 grid list-none grid-cols-1 gap-4 lg:mt-16 lg:grid-cols-3"
+      class="mt-12 divide-y divide-hero-foreground/15 list-none border-y border-hero-foreground/15 lg:mt-14"
     >
       {
         technologies.map((item, index) => (
           <li>
-            <Reveal staggerMs={Math.min(index * 40, 280)}>
-              <article
-                class="tech-card group/card flex h-full flex-col rounded-card bg-hero-foreground/10 p-6 text-hero-foreground md:p-7"
-                aria-label={item.name}
-              >
-                <p class="relative z-10 text-xs font-semibold text-hero-foreground/70 transition-colors duration-200 group-hover/card:text-accent-foreground/80">
-                  {item.role}
-                </p>
-                <h3 class="relative z-10 mt-3 font-display text-lg font-extrabold leading-snug text-hero-foreground transition-colors duration-200 group-hover/card:text-accent-foreground">
-                  {item.name}
-                </h3>
+            <Reveal staggerMs={Math.min(index * 30, 180)}>
+              <div class="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:py-6">
+                <div class="min-w-0">
+                  <p class="text-xs font-semibold text-hero-foreground/65">
+                    {item.role}
+                  </p>
+                  <h3 class="mt-1 font-display text-lg font-extrabold leading-snug text-hero-foreground md:text-xl">
+                    {item.name}
+                  </h3>
+                </div>
                 <ul
-                  class="relative z-10 mt-6 flex list-none flex-wrap gap-3"
-                  aria-label={`Ícones de ${item.name}`}
+                  class="flex shrink-0 list-none flex-wrap gap-2.5"
+                  aria-label={`${ui.technologies.iconsAriaPrefix} ${item.name}`}
                 >
                   {item.icons.map((slug) => (
                     <li>
                       <span
-                        class="tech-logo inline-flex size-8 items-center justify-center rounded-pill bg-hero-foreground/15 text-hero-foreground transition-colors duration-200 group-hover/card:bg-accent-foreground/15 group-hover/card:text-accent-foreground md:size-9"
+                        class="tech-logo inline-flex size-9 items-center justify-center rounded-pill bg-hero-foreground/12 text-hero-foreground md:size-10"
                         aria-hidden="true"
                       >
                         <Icon
@@ -85,7 +84,7 @@ function resolveIconName(slug: string) {
                     </li>
                   ))}
                 </ul>
-              </article>
+              </div>
             </Reveal>
           </li>
         ))
@@ -95,38 +94,6 @@ function resolveIconName(slug: string) {
 </section>
 
 <style is:global>
-  .tech-card {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    transition: transform var(--dur-short) var(--ease-out);
-  }
-
-  .tech-card::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
-    top: 50%;
-    left: 50%;
-    width: 220%;
-    aspect-ratio: 1;
-    border-radius: 999px;
-    background-color: var(--color-accent);
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
-    transition: transform 800ms var(--ease-out);
-    will-change: transform;
-  }
-
-  .tech-card:hover {
-    transform: translateY(-2px);
-  }
-
-  .tech-card:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-  }
-
   .tech-logo svg {
     max-height: 100%;
     max-width: 100%;
@@ -139,25 +106,5 @@ function resolveIconName(slug: string) {
 
   .tech-logo svg :where(line, polyline) {
     stroke: currentColor;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .tech-card {
-      transition: none;
-    }
-
-    .tech-card::before {
-      transition: opacity var(--dur-micro) var(--ease-out);
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 0;
-    }
-
-    .tech-card:hover {
-      transform: none;
-    }
-
-    .tech-card:hover::before {
-      opacity: 1;
-    }
   }
 </style>
