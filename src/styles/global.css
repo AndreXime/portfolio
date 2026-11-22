@@ -125,6 +125,11 @@
 	padding-inline: 0.16em;
 }
 
+.highlight-quote--on-hero {
+	background-image: linear-gradient(var(--accent), var(--accent));
+	color: var(--color-hero-foreground);
+}
+
 @utility card-hover-bordered {
 	@apply rounded-card border border-border bg-card transition-[transform,background-color] duration-200 ease-out hover:-translate-y-0.5;
 }

@@ -39,7 +39,7 @@ hero:
     Sou desenvolvedor de software focado no ecossistema TypeScript,
     com forte inclinação para o desenvolvimento backend. Crio APIs
     modulares e auto-documentadas aplicando boas práticas de arquitetura.
-    Atualmente buscando minha próxima oportunidade como desenvolvedor júnior.
+    ==Atualmente buscando minha próxima oportunidade como desenvolvedor júnior.==
   stackLine: "TS · NestJS · Node.js"
   availabilityLabel: "Disponibilidade"
   availabilityValue: "Aberto a oportunidades"
