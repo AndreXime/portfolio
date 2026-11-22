@@ -1,0 +1,124 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  level: string;
+  stack: string[];
+  location: string;
+  openToWork: boolean;
+  apiHost: string;
+}
+
+const { name, role, level, stack, location, openToWork, apiHost } = Astro.props;
+
+const profile = {
+  name,
+  role,
+  level,
+  stack,
+  location,
+  openToWork,
+};
+
+const payload = JSON.stringify(profile);
+const jqFilter = "{role, level, openToWork, stack}";
+const stackLiteral = stack
+  .map((item) => `<span class="term-string">"${item}"</span>`)
+  .join(", ");
+---
+
+<aside
+  class="hero-terminal-aside hidden min-w-0 w-full lg:block"
+  aria-hidden="true"
+>
+  <div
+    class="hero-terminal overflow-hidden rounded-card border border-hero-foreground/20 bg-hero-foreground/6 shadow-[0_18px_40px_-28px_rgba(0,0,0,0.55)]"
+    data-hero-terminal
+    data-api-host={apiHost}
+    data-profile={payload}
+  >
+    <div
+      class="flex items-center gap-2 border-b border-hero-foreground/15 px-4 py-3"
+    >
+      <span class="size-2.5 rounded-pill bg-[#ff5f57]"></span>
+      <span class="size-2.5 rounded-pill bg-[#febc2e]"></span>
+      <span class="size-2.5 rounded-pill bg-[#28c840]"></span>
+      <span class="ml-2 truncate font-mono text-[11px] text-hero-foreground/55">
+        zsh — api/me
+      </span>
+    </div>
+    <pre
+      class="hero-terminal__screen m-0 overflow-visible whitespace-pre-wrap wrap-break-word px-4 py-4 font-mono text-[12px] leading-[1.65] text-hero-foreground/80 md:text-[13px]"
+      data-hero-terminal-screen
+      set:html={`<span class="term-prompt">$</span> <span class="term-cmd">curl</span> <span class="term-flag">-s</span> <span class="term-flag">-o</span> <span class="term-file">profile.txt</span> <span class="term-url">${apiHost}/api/me</span>
+<span class="term-prompt">$</span> <span class="term-cmd">jq</span> <span class="term-str">'${jqFilter}'</span> <span class="term-file">profile.txt</span>
+{
+  <span class="term-key">"role"</span>: <span class="term-string">"${role}"</span>,
+  <span class="term-key">"level"</span>: <span class="term-string">"${level}"</span>,
+  <span class="term-key">"openToWork"</span>: <span class="term-ok">${openToWork}</span>,
+  <span class="term-key">"stack"</span>: [${stackLiteral}]
+}`}
+    />
+  </div>
+</aside>
+
+<style>
+  .hero-terminal__screen :global(.term-prompt) {
+    color: oklch(72% 0.04 80);
+  }
+
+  .hero-terminal__screen :global(.term-cmd) {
+    color: oklch(78% 0.15 180);
+    font-weight: 600;
+  }
+
+  .hero-terminal__screen :global(.term-flag),
+  .hero-terminal__screen :global(.term-op) {
+    color: oklch(78% 0.06 80);
+  }
+
+  .hero-terminal__screen :global(.term-url),
+  .hero-terminal__screen :global(.term-file) {
+    color: oklch(86% 0.1 210);
+  }
+
+  .hero-terminal__screen :global(.term-str) {
+    color: oklch(82% 0.14 175);
+  }
+
+  .hero-terminal__screen :global(.term-string) {
+    color: oklch(80% 0.17 150);
+  }
+
+  .hero-terminal__screen :global(.term-ok) {
+    color: oklch(78% 0.18 155);
+    font-weight: 600;
+  }
+
+  .hero-terminal__screen :global(.term-key) {
+    color: oklch(74% 0.08 85);
+  }
+
+  .hero-terminal__screen :global(.term-cursor) {
+    display: inline-block;
+    width: 0.55ch;
+    height: 1.05em;
+    margin-left: 0.1ch;
+    vertical-align: -0.12em;
+    background: oklch(78% 0.15 180);
+    animation: hero-term-blink 1s steps(1, end) infinite;
+  }
+
+  @keyframes hero-term-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-terminal__screen :global(.term-cursor) {
+      animation: none;
+      opacity: 1;
+    }
+  }
+</style>

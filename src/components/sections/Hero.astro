@@ -2,17 +2,20 @@
 import { Icon } from "astro-icon/components";
 import Container from "../ui/Container.astro";
 import Button from "../ui/Button.astro";
+import HeroTerminal from "../ui/HeroTerminal.astro";
 import { getPageContext } from "../../lib/i18n/context";
 import { homeHash } from "../../lib/i18n/paths";
 
 const { locale, ui, site } = await getPageContext(Astro.currentLocale);
 const { hero } = site;
 const headlineParts = hero.headline.split(hero.headlineAccent);
+
+const apiHost = Astro.site?.origin ?? "https://andreximenes.xyz";
 ---
 
 <section
   id="inicio"
-  class="relative min-h-dvh overflow-hidden bg-hero text-hero-foreground scroll-mt-0"
+  class="relative min-h-dvh overflow-x-clip bg-hero text-hero-foreground scroll-mt-0"
   aria-labelledby="hero-heading"
 >
   <div
@@ -21,59 +24,71 @@ const headlineParts = hero.headline.split(hero.headlineAccent);
   ></div>
   <div class="relative flex min-h-dvh w-full flex-col justify-center pt-28 pb-16 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24">
     <Container>
-      <div class="min-w-0 max-w-3xl">
-        <p class="text-sm font-semibold text-hero-foreground/70">
-          {site.authorName} · {site.person.jobTitle}
-        </p>
-        <h1
-          id="hero-heading"
-          class="font-display mt-5 max-w-[18ch] text-4xl font-extrabold leading-[1.08] tracking-tight text-hero-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]"
-        >
-          {headlineParts[0]}
-          <span class="rounded-md bg-accent px-1.5 text-accent-foreground">
-            {hero.headlineAccent}
-          </span>
-          {headlineParts[1]}
-        </h1>
-        <p class="mt-8 max-w-2xl text-base leading-[1.75] text-hero-foreground/85">
-          {
-            hero.intro.split(/==(.*?)==/g).map((segment, index) =>
-              index % 2 === 1 ? (
-                <mark class="highlight-quote highlight-quote--on-hero">{segment}</mark>
-              ) : (
-                segment
-              ),
-            )
-          }
-        </p>
-        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <Button href={homeHash(locale, "projetos")} variant="primary" showArrow>
-            {ui.hero.viewProjects}
-          </Button>
-          <Button href={homeHash(locale, "contato")} variant="secondary" onLight>
-            {ui.hero.contactCta}
-          </Button>
-          <div class="flex items-center gap-3">
-            <a
-              href={site.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex size-11 shrink-0 items-center justify-center rounded-pill border border-hero-foreground/40 text-hero-foreground transition-colors duration-200 hover:bg-hero-foreground hover:text-hero focus-ring"
-              aria-label="GitHub"
-            >
-              <Icon name="simple-icons:github" class="size-5" />
-            </a>
-            <a
-              href={site.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex size-11 shrink-0 items-center justify-center rounded-pill border border-hero-foreground/40 text-hero-foreground transition-colors duration-200 hover:bg-hero-foreground hover:text-hero focus-ring"
-              aria-label="LinkedIn"
-            >
-              <Icon name="simple-icons:linkedin" class="size-5" />
-            </a>
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,40%)] lg:gap-10 xl:gap-12">
+        <div class="min-w-0 max-w-3xl">
+          <p class="text-sm font-semibold text-hero-foreground/70">
+            {site.authorName} · {site.person.jobTitle}
+          </p>
+          <h1
+            id="hero-heading"
+            class="font-display mt-5 max-w-[18ch] text-4xl font-extrabold leading-[1.08] tracking-tight text-hero-foreground sm:text-5xl md:text-6xl"
+          >
+            {headlineParts[0]}
+            <span class="rounded-md bg-accent px-1.5 text-accent-foreground">
+              {hero.headlineAccent}
+            </span>
+            {headlineParts[1]}
+          </h1>
+          <p class="mt-8 max-w-2xl text-base leading-[1.75] text-hero-foreground/85">
+            {
+              hero.intro.split(/==(.*?)==/g).map((segment, index) =>
+                index % 2 === 1 ? (
+                  <mark class="highlight-quote highlight-quote--on-hero">{segment}</mark>
+                ) : (
+                  segment
+                ),
+              )
+            }
+          </p>
+          <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <Button href={homeHash(locale, "projetos")} variant="primary" showArrow>
+              {ui.hero.viewProjects}
+            </Button>
+            <Button href={homeHash(locale, "contato")} variant="secondary" onLight>
+              {ui.hero.contactCta}
+            </Button>
+            <div class="flex items-center gap-3">
+              <a
+                href={site.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex size-11 shrink-0 items-center justify-center rounded-pill border border-hero-foreground/40 text-hero-foreground transition-colors duration-200 hover:bg-hero-foreground hover:text-hero focus-ring"
+                aria-label="GitHub"
+              >
+                <Icon name="simple-icons:github" class="size-5" />
+              </a>
+              <a
+                href={site.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex size-11 shrink-0 items-center justify-center rounded-pill border border-hero-foreground/40 text-hero-foreground transition-colors duration-200 hover:bg-hero-foreground hover:text-hero focus-ring"
+                aria-label="LinkedIn"
+              >
+                <Icon name="simple-icons:linkedin" class="size-5" />
+              </a>
+            </div>
           </div>
         </div>
+
+        <HeroTerminal
+          name={site.authorName}
+          role={site.person.jobTitle}
+          level="junior"
+          stack={["TypeScript", "NestJS", "Node.js"]}
+          location={hero.locationValue}
+          openToWork={true}
+          apiHost={apiHost}
+        />
       </div>
     </Container>
   </div>

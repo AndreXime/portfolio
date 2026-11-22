@@ -67,6 +67,7 @@ tokens (`var(--space-md)`), never raw values.
 
 ## What pages MAY differ on
 - Hero archetype within Catalogue + split (text-first hero is allowed).
+- Hero right panel on `lg+` may use a quiet animated terminal (`curl -o` then `jq`) as enrichment. Hide on mobile. Reduced-motion shows the final frame.
 - Project image wells may use dominant colour from the screenshot.
 - Project tiles may use `cardTitle` for scannable labels while page H1 keeps `title`.
 

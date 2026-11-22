@@ -67,6 +67,7 @@ const jsonLd = buildPortfolioJsonLd({
   <script>
     import { initContactForm } from "../../scripts/contact-form";
     import { initExpandableList } from "../../scripts/expandable-list";
+    import { initHeroTerminal } from "../../scripts/hero-terminal";
     import { initNavScrollSpy } from "../../scripts/nav-scroll-spy";
     import { initReveal } from "../../scripts/reveal-observer";
 
@@ -75,6 +76,7 @@ const jsonLd = buildPortfolioJsonLd({
       initNavScrollSpy();
       initExpandableList();
       initContactForm();
+      initHeroTerminal();
     }
 
     document.addEventListener("DOMContentLoaded", initHomePage);
