@@ -44,6 +44,7 @@ export const en = {
 		subtitle: "Day-to-day stack",
 		intro:
 			"This is not everything I have ever used. These are the tools that matter most in what I ship today. Others come in as the problem demands, and I keep learning what each project needs.",
+		iconsAriaPrefix: "Icons for",
 	},
 	formations: {
 		title: "Education",
@@ -55,6 +56,7 @@ export const en = {
 		credentialCta: "View credential on Coursera",
 	},
 	cta: {
+		contact: "Talk now",
 		linkedin: "Connect on LinkedIn",
 		resume: "Download resume (PDF)",
 	},
@@ -62,7 +64,7 @@ export const en = {
 		title: "Contact",
 		subtitle: "Proposals, partnerships, or a technical chat",
 		intro:
-			"Use the form, email, or social links. For roles, include the job description or LinkedIn link; I usually reply within one business day.",
+			"This is the closing point: form, email, resume, or social links. For roles, include the job description or LinkedIn link; I usually reply within one business day.",
 		name: "Name",
 		namePlaceholder: "What should I call you",
 		email: "Email",

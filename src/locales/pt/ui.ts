@@ -44,6 +44,7 @@ export const pt = {
 		subtitle: "Stack do dia a dia",
 		intro:
 			"Não é uma lista de tudo que já usei, são as que mais pesam no que entrego hoje. Fora delas entram outras conforme o problema e sigo aprendendo o que fizer sentido em cada projeto.",
+		iconsAriaPrefix: "Ícones de",
 	},
 	formations: {
 		title: "Formações",
@@ -55,6 +56,7 @@ export const pt = {
 		credentialCta: "Ver credencial no Coursera",
 	},
 	cta: {
+		contact: "Conversar agora",
 		linkedin: "Conectar no LinkedIn",
 		resume: "Baixar currículo (PDF)",
 	},
@@ -62,7 +64,7 @@ export const pt = {
 		title: "Contato",
 		subtitle: "Propostas, parcerias ou conversa técnica",
 		intro:
-			"Use o formulário, o e-mail ou as redes. Para vagas, inclua a descrição ou o link do LinkedIn; costumo responder em até um dia útil.",
+			"Aqui é o ponto final: formulário, e-mail, currículo ou redes. Para vagas, inclua a descrição ou o link do LinkedIn; costumo responder em até um dia útil.",
 		name: "Nome",
 		namePlaceholder: "Como posso te chamar",
 		email: "E-mail",

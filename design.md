@@ -66,8 +66,9 @@ tokens (`var(--space-md)`), never raw values.
 - Single accent (`oklch(48% 0.09 180)`) for CTAs and emphasis.
 
 ## What pages MAY differ on
-- Hero archetype within Catalogue + split.
+- Hero archetype within Catalogue + split (text-first hero is allowed).
 - Project image wells may use dominant colour from the screenshot.
+- Project tiles may use `cardTitle` for scannable labels while page H1 keeps `title`.
 
 ## Provenance
 Design system locked for the user's brand on 2026-09-16. Structural DNA

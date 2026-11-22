@@ -4,8 +4,9 @@ import AccentBar from "../ui/AccentBar.astro";
 import Reveal from "../ui/Reveal.astro";
 import Button from "../ui/Button.astro";
 import { getPageContext } from "../../lib/i18n/context";
+import { homeHash } from "../../lib/i18n/paths";
 
-const { ui, site } = await getPageContext(Astro.currentLocale);
+const { locale, ui, site } = await getPageContext(Astro.currentLocale);
 ---
 
 <section
@@ -28,11 +29,11 @@ const { ui, site } = await getPageContext(Astro.currentLocale);
       <div
         class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
       >
-        <Button href={site.linkedinUrl} variant="primary" showArrow onLight>
-          {ui.cta.linkedin}
+        <Button href={homeHash(locale, "contato")} variant="primary" showArrow onLight>
+          {ui.cta.contact}
         </Button>
-        <Button href={site.resumePdfUrl} variant="secondary" onLight>
-          {ui.cta.resume}
+        <Button href={site.linkedinUrl} variant="secondary" onLight>
+          {ui.cta.linkedin}
         </Button>
       </div>
     </Reveal>
