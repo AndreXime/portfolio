@@ -132,6 +132,7 @@ const projects = defineCollection({
 		z.object({
 			order: z.number().int().min(0),
 			title: z.string(),
+			cardTitle: z.string().optional(),
 			shortDescription: z.string(),
 			tech: z.array(z.string()),
 			imageUrl: image(),

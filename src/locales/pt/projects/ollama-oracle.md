@@ -2,6 +2,7 @@
 order: 3
 experimental: true
 title: "Chat corporativo com RAG local: respostas com fonte e sem inventar política"
+cardTitle: "Chat corporativo com RAG local"
 shortDescription: "Lab de chatbot corporativo com RAG local para consultar políticas, cursos e onboarding sem enviar a base a APIs externas. Stack em Bun, Hono, React, Ollama e ChromaDB, com embeddings e geração no ambiente local. O retrieval filtra por distância, reordena por overlap lexical e recorre ao fallback lexical quando a similaridade vetorial é fraca. A resposta sai em streaming NDJSON, com cancelamento e fontes por trecho."
 tech: ["Bun", "Hono", "React", "Ollama", "ChromaDB", "LangChain"]
 imageUrl: "../../../assets/projects/ollama-oracle.png"

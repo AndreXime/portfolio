@@ -2,6 +2,7 @@
 order: 1
 experimental: true
 title: "Multi-tenant recruiting platform: from careers site to auditable pipeline"
+cardTitle: "Multi-tenant ATS with auditable pipeline"
 shortDescription: "Lab for a multi-tenant ATS in TypeScript to practice an end-to-end recruiting domain. Companies run in logical isolation per tenant, and the candidate keeps a single profile across applications. The focus is state machines, a per-job pipeline with auditing, and defense in depth for data access with Prisma over PostgreSQL. NestJS API, Next.js product, pre-signed uploads, and a public careers site in the same design."
 tech: ["TypeScript", "NestJS", "Next.js", "Prisma", "PostgreSQL", "TanStack Query"]
 imageUrl: "../../../assets/projects/deploy-talent.png"
